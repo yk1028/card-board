@@ -1,0 +1,21 @@
+<div style="margin-top: 50px" class="container">
+  <a href="/new" class="waves-effect waves-light btn">글쓰기</a>
+  <div class="row">
+    <% @posts.each do |p|%>
+          <div class="col s4 m4">
+            <div class="card">
+              <a href="/show/<%=p.id%>">
+                <div class="card-image">
+                  <img style="height: 300px" src="<%=p.img%>">
+                </div>
+              </a>
+              <div style="height: 100px" class="card-content">
+                <span class="card-title"><%=p.title%></span>
+                <p><%=p.content%></p>
+              </div>
+              <a href="/delete/" class="waves-effect waves-light red btn">삭제</a>
+            </div>
+          </div>
+    <% end %>
+  </div>
+</div>
